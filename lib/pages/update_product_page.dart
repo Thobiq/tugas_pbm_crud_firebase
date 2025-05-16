@@ -41,12 +41,12 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
     }
   }
 
-  Future<String> _uploadImage(File image) async {
-    final fileName = p.basename(image.path);
-    final ref = FirebaseStorage.instance.ref().child('product_images/$fileName');
-    await ref.putFile(image);
-    return await ref.getDownloadURL();
-  }
+  // Future<String> _uploadImage(File image) async {
+  //   final fileName = p.basename(image.path);
+  //   final ref = FirebaseStorage.instance.ref().child('product_images/$fileName');
+  //   await ref.putFile(image);
+  //   return await ref.getDownloadURL();
+  // }
 
   Future<void> _updateProduct() async {
     if (_formKey.currentState!.validate()) {
