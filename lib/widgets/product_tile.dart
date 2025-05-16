@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:product_firebase/pages/add_product_page.dart';
+import 'package:product_firebase/pages/update_product_page.dart';
 import '../models/product.dart';
 import '../services/product_service.dart';
 
@@ -21,7 +22,7 @@ class ProductTile extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => AddProductPage(),
+                builder: (_) => UpdateProductPage(product: product),
               ),
             );
           },
